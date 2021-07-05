@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+
+    <action
+        android:id="@+id/action_favouriteMoviesFragment_to_detailFragment"
+        app:destination="@id/detailFragment" />
+    <fragment
+        android:id="@+id/favouriteMoviesFragment"
+        android:name="com.victorasj.wsprueba.ui.main.FavouriteMoviesFragment"
+        android:label="favourite_movies_fragment"
+        tools:layout="@layout/favourite_movies_fragment">
+        <action
+            android:id="@+id/action_favouriteMoviesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_popularMoviesFragment_to_detailFragment"
+        app:destination="@id/detailFragment" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.victorasj.wsprueba.ui.detail.DetailFragment"
+        android:label="DetailFragment">
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFragment_to_popularMoviesFragment"
+            app:destination="@id/popularMoviesFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_detailFragment_to_popularMoviesFragment"
+        app:destination="@id/popularMoviesFragment" />
+    <fragment
+        android:id="@+id/popularMoviesFragment"
+        android:name="com.victorasj.wsprueba.ui.main.PopularMoviesFragment"
+        android:label="popular_movies_fragment"
+        tools:layout="@layout/popular_movies_fragment">
+        <action
+            android:id="@+id/action_popularMoviesFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.victorasj.wsprueba.ui.splash.SplashFragment"
+        android:label="splash_fragment"
+        tools:layout="@layout/splash_fragment" >
+        <action
+            android:id="@+id/action_splashFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.victorasj.wsprueba.ui.main.ViewPagerFragment"
+        android:label="viewpager_fragment"
+        tools:layout="@layout/viewpager_fragment" >
+        <action
+            android:id="@+id/action_viewPagerFragment_to_popularMoviesFragment"
+            app:destination="@id/popularMoviesFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_favouriteMoviesFragment"
+            app:destination="@id/favouriteMoviesFragment" />
+    </fragment>
+
+</navigation>

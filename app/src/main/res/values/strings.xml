@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">WSPrueba</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="popular_tab">Populares</string>
+    <string name="favourite_tab">Favoritas</string>
+
+    <string name="search">Búsqueda</string>
+
+    <string name="api_key">4bcc2773da5a08a630103ae8669920db</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
